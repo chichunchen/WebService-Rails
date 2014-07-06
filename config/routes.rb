@@ -1,4 +1,9 @@
 WebServiceRails::Application.routes.draw do
+
+
+  resources :products
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +58,15 @@ WebServiceRails::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
+  # root to: "home#index"
+
+  devise_scope :users do
+    get "users", to: "users#index"
+  end
+
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+
+
 end
