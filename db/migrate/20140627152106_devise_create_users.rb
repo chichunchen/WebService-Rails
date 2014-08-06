@@ -36,6 +36,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## self defined
       t.string :address
       t.string :phone
+      t.binary :picture
+
     end
 
     add_index :users, :email,                unique: true

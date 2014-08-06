@@ -1,6 +1,8 @@
 WebServiceRails::Application.routes.draw do
 
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :products
 
 
@@ -67,6 +69,10 @@ WebServiceRails::Application.routes.draw do
   end
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
+
+  namespace :users do
+    resource :profile
+  end
 
 
 end
