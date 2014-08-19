@@ -7,8 +7,9 @@ product show.html.erb 加 notice 則會顯示兩次flash
 
 
 user: 
-name email phone address
-可以看index, show
+若登入成功 redirect 到 product#index
+可以看index, show 
+還未限制做index, show 之外的action
 
 admin:
 CRUD 新商品

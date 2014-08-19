@@ -5,9 +5,7 @@ WebServiceRails::Application.routes.draw do
   ActiveAdmin.routes(self)
   resources :products
 
-  devise_scope :user do
-    root to: "devise/sessions#new"
-  end
+  root to: "products#index"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
