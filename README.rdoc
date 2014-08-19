@@ -2,15 +2,16 @@ ruby version 2.0.0
 
 rails version 4.0.3
 
+bug:
 product show.html.erb 加 notice 會顯示兩次flash 
 還未限制做index, show 之外的action
 
 
+next to do
 
 user: 
-若登入成功 redirect 到 product#index
-可以看index, show 
+只能看index, show 
 
 admin:
-CRUD 新商品
-新增商品時發送email
+登入後可CRUD 新商品
+新增商品時發送email給用戶
