@@ -2,14 +2,14 @@ ruby version 2.0.0
 
 rails version 4.0.3
 
-product show.html.erb 加 notice 則會顯示兩次flash
+product show.html.erb 加 notice 會顯示兩次flash 
+還未限制做index, show 之外的action
 
 
 
 user: 
 若登入成功 redirect 到 product#index
 可以看index, show 
-還未限制做index, show 之外的action
 
 admin:
 CRUD 新商品
