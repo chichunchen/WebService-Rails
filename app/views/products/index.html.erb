@@ -3,24 +3,28 @@
 <table>
   <thead>
     <tr>
+      <th>Picture</th>
       <th>Name</th>
       <th>Price</th>
       <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>edit</th>
+      <th>delete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.price %></td>
-        <td><%= product.description %></td>
-        <td><%= link_to 'Show', product %></td>
+        <td><%= image_tag(product.image_url, :class => 'list_image') %></td>
+        <td><%= link_to product.name, product_path(product) %></td>
+        <td><%= number_to_currency(product.price) %></td>
+        <td>
+          <%= truncate(strip_tags(product.description), :length => 60) %>
+        </td>
+        
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
