@@ -2,16 +2,15 @@ ruby version 2.0.0
 
 rails version 4.0.3
 
+
 bug:
 product show.html.erb 加 notice 會顯示兩次flash 
-還未限制做index, show 之外的action
+user 可 CRUD products
+rails 4.0 以上在 admin 內做 new, edit 會有問題 (災情很多，有解)
 
 
 next to do
 
-user: 
-只能看index, show 
-
 admin:
-登入後可CRUD 新商品
+
 新增商品時發送email給用戶
