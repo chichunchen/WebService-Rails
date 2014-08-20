@@ -20,7 +20,7 @@ ActiveAdmin.register User do
     column :address
     column :phone
 
-    # actions
+    actions
   end
 
   form do |f|
@@ -31,7 +31,7 @@ ActiveAdmin.register User do
       f.input :address
       f.input :phone
     end
-    # f.actions
+    f.actions
   end
 
   config.filters = false
