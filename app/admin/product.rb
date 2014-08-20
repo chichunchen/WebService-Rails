@@ -37,24 +37,13 @@ ActiveAdmin.register Product do
   controller do
     
     def create
-      create! do |format|
-        format.html { redirect_to '/admin/products' }
-      end
+      super
     end
 
     def update
-      update! do |format|
-        format.html { redirect_to '/admin/products' }
-      end
+      super
     end
-
-    # 完全沒作用
-    def destroy
-      destroy! do |format|
-        format.html { redirect_to '/admin/products' }
-      end
-    end
-
+    
   end
   
   # See permitted parameters documentation:
