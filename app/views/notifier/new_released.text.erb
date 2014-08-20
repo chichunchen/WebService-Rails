@@ -1,0 +1,5 @@
+<%= image_tag(@product.image_url, :class => 'list_image') %>
+Name: <%= link_to @product.name, product_path(@product) %>
+Price: <%= number_to_currency(@product.price) %>
+Description: <%= truncate(strip_tags(@product.description), :length => 60) %>
+    

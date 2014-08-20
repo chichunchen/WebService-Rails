@@ -14,6 +14,14 @@ ActiveAdmin.register User do
   #  permitted
   # end
 
+  index do
+    column :email
+    column :address
+    column :phone
+
+    actions
+  end
+
   form do |f|
     f.inputs "User Details" do
       f.input :email
@@ -24,5 +32,7 @@ ActiveAdmin.register User do
     end
     f.actions
   end
+
+  config.filters = false
 
 end
