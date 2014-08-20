@@ -6,7 +6,7 @@ class Notifier < ActionMailer::Base
   #
   #   en.notifier.new_released.subject
   #
-  def new_released(product, users)
+  def new_released(product)
     @product = product
     # @users = users
 

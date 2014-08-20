@@ -33,6 +33,29 @@ ActiveAdmin.register Product do
   filter :name
   filter :description
   filter :price , :as => :numeric
+
+  controller do
+    
+    def create
+      create! do |format|
+        format.html { redirect_to '/admin/products' }
+      end
+    end
+
+    def update
+      update! do |format|
+        format.html { redirect_to '/admin/products' }
+      end
+    end
+
+    # 完全沒作用
+    def destroy
+      destroy! do |format|
+        format.html { redirect_to '/admin/products' }
+      end
+    end
+
+  end
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

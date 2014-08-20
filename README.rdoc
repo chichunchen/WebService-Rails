@@ -5,6 +5,9 @@ rails version 4.0.3
 
 To do :
 
-1. admin 新增商品時發送email給用戶
-2. admin user click delete button to destroy product
-3. 使 user 無權限 Delete products
+**1. admin 新增商品時發送email給用戶
+
+
+2. 使 user 無權限 Delete products
+
+3. product create didn't validate

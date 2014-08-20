@@ -16,4 +16,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:username, :email) }
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email ,:password, :password_confirmation, :phone, :address) }
   end
+
+  module ActiveAdmin
+    class Product  < ActiveRecord::Base
+      after_create :send_email
+      def send_email
+          Notifier.new_released(product).deliver
+      end
+    end
+  end
+
 end
