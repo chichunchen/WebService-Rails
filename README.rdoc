@@ -6,3 +6,4 @@ rails version 4.0.3
 To do :
 
 ** admin 新增商品時發送email給用戶
+寄信失敗要catch exception
