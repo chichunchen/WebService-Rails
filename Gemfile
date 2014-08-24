@@ -53,5 +53,3 @@ end
 gem 'devise'
 
 gem 'bootstrap-sass'
-
-

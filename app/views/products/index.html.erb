@@ -2,7 +2,7 @@
   <table class="table table-hover">
     <tbody>
       <% @products.each do |product| %>
-        <tr>
+        <tr data-link="<%= product_path(product) %>">
           <td><%= image_tag url_for(:controller => "application", :action => "show_image", :model => product.class.name,:id => product.id), class: "img-thumbnail img-responsive", width: "113", height: "113" %></td>
           <td>
             <%= link_to product.name, product_path(product) %><br>
@@ -10,10 +10,12 @@
           </td>
           <td><%= number_to_currency(product.price) %></td>
           </td>
+          <td>
+            <em> <%= product.updated_at.strftime("%m/%d/%Y") %> </em>
+          </td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
   <br>
 </div>
