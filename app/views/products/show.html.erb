@@ -1,4 +1,4 @@
-<div class="col-md-12"> 
+<div class="col-md-12">
 	<p id="notice"><%= notice %></p>
 
 	<h1>
@@ -6,7 +6,7 @@
 	</h1>
 
 	<h1>
-	  <%= image_tag(@product.image_url, :class => 'list_image') %>
+	  <%= image_tag url_for(:controller => "/application", :action => "show_image", :model => @product.class.name, :id => @product.id), class: "img-thumbnail img-responsive", width: "113", height: "113" %>
 	</h1>
 
 	<p class="lead">

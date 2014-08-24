@@ -7,6 +7,16 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 
+  # show blob image
+  # params => model_name, id
+  def show_image
+    if not params[:model].nil? and not params[:id].nil?
+      @object = params[:model].singularize.classify.constantize.find(params[:id])
+      send_data @object.image, :type => 'image/jpg', :disposition => 'inline' if not @object.nil?
+    end
+  end
+
+
 
 
   protected
@@ -21,7 +31,7 @@ class ApplicationController < ActionController::Base
     class Product  < ActiveRecord::Base
       after_create :send_email
       def send_email
-          Notifier.new_released(product).deliver
+        Notifier.new_released(product).deliver
       end
     end
   end

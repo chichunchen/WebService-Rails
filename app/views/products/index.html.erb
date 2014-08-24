@@ -1,9 +1,9 @@
-<div class="col-md-12"> 
+<div class="col-md-12">
   <table class="table table-hover">
     <tbody>
       <% @products.each do |product| %>
         <tr>
-          <td><%= image_tag(product.image_url, :class => 'list_image') %></td>
+          <td><%= image_tag url_for(:controller => "application", :action => "show_image", :model => product.class.name,:id => product.id), class: "img-thumbnail img-responsive", width: "113", height: "113" %></td>
           <td>
             <%= link_to product.name, product_path(product) %><br>
             <%= truncate(strip_tags(product.description), :length => 60) %>

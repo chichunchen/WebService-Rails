@@ -77,4 +77,8 @@ WebServiceRails::Application.routes.draw do
   end
 
 
+  get 'admin/products/show_image/:id' => 'admin/products#show_image'
+  get 'application/show_image/:model/:id' => 'application#show_image'
+
+
 end
