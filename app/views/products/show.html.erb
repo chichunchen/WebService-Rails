@@ -9,12 +9,16 @@
 	  <%= image_tag url_for(:controller => "/application", :action => "show_image", :model => @product.class.name, :id => @product.id), class: "img-thumbnail img-responsive", width: "113", height: "113" %>
 	</h1>
 
-	<p class="lead">
-	  <%= raw(@product.description) %>
-	</p>
+	<h4>
+	  <%= simple_format(@product.description) %>
+	</h4>
+
+	<h4 class="lead">
+	  <strong><%= number_to_currency(@product.price) %></strong>
+	</h4>
 
 	<p>
-	  <%= number_to_currency(@product.price) %>
+	  <em> <%= @product.updated_at.strftime("%m/%d/%Y") %> </em>
 	</p>
 
 	<hr>

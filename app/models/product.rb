@@ -8,6 +8,10 @@ class Product < ActiveRecord::Base
   validates :name, :uniqueness => true
 # validates_format_of :image_url, :with => %r{\.(gif|jpe?g|png)$}i, :message => "must have an image extension"
 
+  searchable do
+    text :name, :description
+  end
+
 
   def send_email
     Notifier.new_released(self).deliver
