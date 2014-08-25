@@ -31,6 +31,7 @@ class ApplicationController < ActionController::Base
     class Product  < ActiveRecord::Base
       after_create :send_email
       def send_email
+        print 'after create!!!!!!!!!'
         Notifier.new_released(product).deliver
       end
     end

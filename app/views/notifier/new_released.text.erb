@@ -1,5 +1,11 @@
-<%= image_tag(@product.image_url, :class => 'list_image') %>
+
+<%= image_tag url_for(:controller => "/application", :action => "show_image", :model => @product.class.name, :id => @product.id), class: 'list_image' %>
+
+<br>
 Name: <%= link_to @product.name, product_path(@product) %>
+<br>
 Price: <%= number_to_currency(@product.price) %>
+<br>
 Description: <%= truncate(strip_tags(@product.description), :length => 60) %>
-    
+<br>
+
