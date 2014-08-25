@@ -36,8 +36,8 @@ WebServiceRails::Application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => "gmail.com",
-    :user_name => "maydaychaaaa@gmail.com",
-    :password => "a047226657",
+    :user_name => "netlabtamama@gmail.com",
+    :password => "ilovenetlab",
   }
 
   # set to false if want to deploy to heroku
