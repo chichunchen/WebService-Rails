@@ -5,5 +5,4 @@ rails version 4.0.3
 
 To do :
 
-**
-寄信失敗要catch exception
+* rest api authenticate
