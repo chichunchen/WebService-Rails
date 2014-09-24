@@ -3,6 +3,5 @@ ruby version 2.0.0
 rails version 4.0.3
 
 
-To do :
 
-* rest api authenticate
+gem tiny_tds: brew install freetds

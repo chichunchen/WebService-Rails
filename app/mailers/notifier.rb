@@ -10,7 +10,6 @@ class Notifier < ActionMailer::Base
   def new_released(product)
     @product = product
 
-    # send to all users
     @users = User.all
 
     @users.each { |user| mail to: user.email, :subject => 'New commodity released!' }
