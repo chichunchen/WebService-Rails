@@ -5,7 +5,7 @@ ActiveAdmin.register User do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :email, :password, :password_confirmation, :address, :phone
+  permit_params :email, :password, :password_confirmation, :address, :phone, :name
   #
   # or
   #
@@ -19,6 +19,7 @@ ActiveAdmin.register User do
     column :email
     column :address
     column :phone
+    column :name
 
     actions
   end
@@ -30,6 +31,7 @@ ActiveAdmin.register User do
       f.input :password_confirmation
       f.input :address
       f.input :phone
+      f.input :name
     end
     f.actions
   end
