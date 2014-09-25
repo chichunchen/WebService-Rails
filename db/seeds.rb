@@ -7,7 +7,8 @@ create_account = for i in 1..10 do
                       name: "測試用帳號no.#{i}",
                       address: "地址#{i}",
                       phone: "12345678",
-                      confirmed_at: Time.now                    
+                      confirmed_at: Time.now,
+                      auth_token: "#{rand(100000000000)}"   
                     ])
                   end
 
