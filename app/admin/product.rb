@@ -68,7 +68,6 @@ ActiveAdmin.register Product do
       send_data @product.image, :type => 'image/jpg', :disposition => 'inline'
     end
 
-
   end
 
   # See permitted parameters documentation:

@@ -24,6 +24,19 @@ ActiveAdmin.register User do
     actions
   end
 
+  show do |user|
+    attributes_table do
+      row :email
+      row :name
+      row :address
+      row :phone
+      # row :image do
+      #   image_tag url_for(:controller => "/application", :action => "show_image", :model => user.class.name, :id => user.id), class: "img-thumbnail img-responsive", width: "113", height: "113"
+      # end
+      # row :description
+    end
+  end
+
   form do |f|
     f.inputs "User Details" do
       f.input :email
@@ -32,10 +45,14 @@ ActiveAdmin.register User do
       f.input :address
       f.input :phone
       f.input :name
+      # f.input :description
+      # f.input :image, :as => :file
     end
     f.actions
   end
 
   config.filters = false
+
+
 
 end
