@@ -27,8 +27,6 @@ class ApplicationController < ActionController::Base
   end
 
 
-
-
   protected
 
 
