@@ -9,8 +9,12 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json {
-        @products.map { |p| p.image = "1" if p.image != nil }
-        render :json => @products.to_json
+        @products.map do |p|
+          p.image = "1" if p.image != nil
+          p.url = product_url(p)
+        end
+        # @products.map { |p| p.image = "1" if p.image != nil }
+        render :json => @products, methods: [:url]
       }
     end
   end
