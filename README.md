@@ -1,7 +1,7 @@
 # 版本: 
 
-* ### ruby version 2.0.0
-* ### rails version 4.0.3
+### ruby version 2.0.0
+### rails version 4.0.3
 
 -------------
 
@@ -16,3 +16,5 @@
 ### 自動build 外加 db:seed
 
 * rake dev:rebuilt
+
+-------------
