@@ -1,7 +1,7 @@
 # 版本: 
 
-* ### ruby version 2.0.0
-* ### rails version 4.0.3
+### ruby version 2.0.0
+### rails version 4.0.3
 
 -------------
 
@@ -18,9 +18,3 @@
 * rake dev:rebuilt
 
 -------------
-
-devise:
-
-show: http://localhost:4000/api/v1/users/1
-
-create: http://localhost:4000/api/v1/users
