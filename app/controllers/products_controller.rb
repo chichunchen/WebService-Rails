@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:edit, :update, :destroy]
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   protect_from_forgery except: [:api_create]
 
