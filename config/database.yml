@@ -11,11 +11,11 @@
 
 development:
   adapter: sqlserver
-  host: # ip address
-  port: # port
-  database: # railsDev
-  username: # railsUser
-  password: # password 
+  host: 140.113.73.51
+  port: 5566
+  database: railsDev
+  username: netlab
+  password: root
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
