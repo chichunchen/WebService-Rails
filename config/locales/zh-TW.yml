@@ -116,17 +116,17 @@ zh-TW:
       not_an_integer: 必須是整數
       odd: 必須是奇數
       record_invalid: ! '校驗失敗: %{errors}'
-      restrict_dependent_destroy: 
+      restrict_dependent_destroy:
         one: 由於 %{record} 需要此記錄，所以無法移除記錄
         many: 由於 %{record} 需要此記錄，所以無法移除記錄
       taken: 已經被使用
-      too_long: 
+      too_long:
         one: 過長（最長是一個字）
         other: 過長（最長是 %{count} 個字）
-      too_short: 
+      too_short:
         one: 過短（最短是一個字）
         other: 過短（最短是 %{count} 個字）
-      wrong_length: 
+      wrong_length:
         one: 字數錯誤 (必須是一個字)
         other: 字數錯誤 (必須是 %{count} 個字)
       other_than: 不可以是 %{count} 個字
@@ -176,7 +176,7 @@ zh-TW:
       storage_units:
         format: ! '%n %u'
         units:
-          byte: 
+          byte:
             one: 位元組
             other: 位元組
           gb: GB
@@ -201,3 +201,47 @@ zh-TW:
       long: ! '%Y年%b%d日 %H:%M'
       short: ! '%b%d日 %H:%M'
     pm: 下午
+
+
+
+  active_admin:
+    devise:
+      username:
+        title: "使用者名稱"
+      email:
+        title: "電子郵件"
+      subdomain:
+        title: "子網域"
+      password:
+        title: "密碼"
+      sign_up:
+        title: "註冊"
+        submit: "註冊"
+      login:
+        title: "登入"
+        remember_me: "記住我"
+        submit: "登入"
+      reset_password:
+        title: "忘記您的密碼?"
+        submit: "重設您的密碼"
+      change_password:
+        title: "更改您的密碼"
+        submit: "更改您的密碼"
+      unlock:
+        title: "Resend unlock instructions"
+        submit: "Resend unlock instructions"
+      resend_confirmation_instructions:
+        title: "Resend confirmation instructions"
+        submit: "Resend confirmation instructions"
+      links:
+        sign_in: "登入"
+        forgot_your_password: "忘記您的密碼?"
+        sign_in_with_omniauth_provider: "以 %{provider} 身份登入"
+        resend_unlock_instructions: "Re-send unlock instructions"
+    access_denied:
+      message: "You are not authorized to perform this action."
+    index_list:
+      table: "Table"
+      block: "List"
+      grid: "Grid"
+      blog: "Blog"
