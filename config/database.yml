@@ -32,7 +32,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: sqlserver
+  host: 140.113.73.51
+  port: 5566
+  database: railsDev
+  username: netlab
+  password: root
