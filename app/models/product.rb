@@ -11,7 +11,8 @@ class Product < ActiveRecord::Base
 
 
   def send_email
-    Notifier.new_released(self).deliver
+    # Notifier.new_released(self).deliver
+    Notifier.new_released(self)
   end
 
 end

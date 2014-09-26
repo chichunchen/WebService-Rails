@@ -7,13 +7,22 @@ class Notifier < ActionMailer::Base
   #   en.notifier.new_released.subject
   #
 
-  def new_released(product)
-    @product = product
+  def self.new_released(product)
+    @mails = []
 
-    @users = User.all
+    User.all.each { |user| @mails << user.email }
 
-    @users.each { |user| mail to: user.email, :subject => 'New commodity released!' }
+    AdminUser.all.each { |admin| @mails << admin.email }
+
+    @mails.each { |m| construct_mail(product, m).deliver }
+
     # mail to: "chi.chun_chen844@icloud.com", :subject => 'New commodity released!'
       # mail to: "maydaychaaaa@gmail.com", :subject => 'New commodity released!'
   end
+
+  def construct_mail(product, address)
+    @product = product
+    mail to: address, subject: "New commodity released!"
+  end
+
 end
