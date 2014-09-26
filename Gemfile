@@ -54,5 +54,5 @@ gem 'devise'
 
 gem 'bootstrap-sass'
 
-# gem 'activerecord-sqlserver-adapter', '~> 4.0.0'
-# gem 'tiny_tds', '~> 0.6.2'
+gem 'activerecord-sqlserver-adapter', '~> 4.0.0'
+gem 'tiny_tds', '~> 0.6.2'
