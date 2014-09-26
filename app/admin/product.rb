@@ -56,6 +56,7 @@ ActiveAdmin.register Product do
     end
 
     def update
+      params[:product][:image] = open(params[:product][:image].tempfile).read if not params[:product][:image].nil?
       super
     end
 
