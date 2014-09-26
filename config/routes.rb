@@ -31,6 +31,8 @@ WebServiceRails::Application.routes.draw do
   get 'admin/products/show_image/:id' => 'admin/products#show_image'
   get 'application/show_image/:model/:id' => 'application#show_image'
 
+  post 'test' => 'api/v1/sessions#test'
+
   # api
   namespace :api do
     namespace :v1 do
