@@ -14,7 +14,7 @@ development:
   host: 140.113.73.51
   port: 5566
   database: railsDev
-  username: maydaycha
+  username: netlab
   password: root
 
   # adapter: sqlite3
