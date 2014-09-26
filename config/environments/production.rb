@@ -27,7 +27,7 @@ WebServiceRails::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -78,7 +78,14 @@ WebServiceRails::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  # Debug mode disables concatenation and preprocessing of assets.
+  # This option may cause significant delays in view rendering with a large
+  # number of complex assets.
+  config.assets.debug = true
+
   config.action_mailer.default_url_options = { host: '140.113.72.8:3000' }
+  config.action_mailer.asset_host = 'http://140.113.72.8:3000'
+
 
   config.action_mailer.delivery_method = :smtp
 
