@@ -48,11 +48,11 @@ ActiveRecord::Schema.define(version: 20140925154447) do
 
   create_table "products", force: true do |t|
     t.string   "name"
-    t.float    "price",       limit: 24
+    t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
-    t.binary   "image"
+    t.binary   "image",       limit: 52428800
   end
 
   create_table "users", force: true do |t|

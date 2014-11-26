@@ -1,20 +1,19 @@
-# 版本: 
+WebService-Rails
+=========
+This web service is for serving customers data and the data of the company. Customers can browse the products of the company and receive e-mails when new products is launched. The staff of this company can scan the Barcode or QRcode to add products to the database.
 
-### ruby version 2.0.0
-### rails version 4.0.3
+You can find the client app for this web service [here](: https://github.com/chichunchen/QRcode_Android).
 
--------------
+Version: 
+-----------
+    ruby version 2.0.0  
+    rails version 4.0.3
 
-### 使用 SQL Server: 
+### Auto clear tmp, log, db:drop, db:create, db:migrate
 
-* brew install freetds(for tiny_tds gem)
+	rake dev:build
 
-### 自動化清除tmp, log, db:drop, db:create, db:migrate
+### Automatically build and then db:seed
+	
+	rake dev:rebuilt
 
-* rake dev:build
-
-### 自動build 外加 db:seed
-
-* rake dev:rebuilt
-
--------------
